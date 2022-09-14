@@ -27,7 +27,7 @@ const SingleNote = () => {
       },
       body: JSON.stringify({ ...note, updated: new Date() }),
     });
-    navigate(`/`, { state: note });
+    navigate(`/notes`, { state: note });
   };
 
   let deleteNote = async () => {
@@ -37,7 +37,7 @@ const SingleNote = () => {
         "Content-Type": "application/json",
       },
     });
-    navigate(`/`, { state: note });
+    navigate(`/notes`, { state: note });
   };
 
   let addNote = async () => {
@@ -53,7 +53,7 @@ const SingleNote = () => {
         created: new Date(),
       }),
     });
-    navigate(`/`, { state: note });
+    navigate(`/notes`, { state: note });
   };
 
   let handleSubmission = () => {
@@ -70,7 +70,7 @@ const SingleNote = () => {
     <div className="note">
       <div className="note-header">
         <h3>
-          <Link onClick={handleSubmission} to={`/`}>
+          <Link onClick={handleSubmission} to={`/notes`}>
             <ArrowLeft />
           </Link>
         </h3>

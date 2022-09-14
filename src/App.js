@@ -12,9 +12,8 @@ function App() {
         <div className="app">
           <Header />
           <Routes>
-            <Route exact path="/" element={<NotesList />} />
+            <Route path="/notes" element={<NotesList />} />
             <Route path="/note/:noteId" element={<Note />} />
-            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
       </div>
